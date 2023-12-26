@@ -18,7 +18,7 @@ export default function Home() {
             </p>
             <Button className="border-2 border-primary-500 hover:bg-transparent hover:text-primary-500">
               {" "}
-              <Link href="#events">Let's Go !</Link>
+              <Link href="#events">Let&apos;s Go !</Link>
             </Button>
           </div>
           <Image
