@@ -1,15 +1,33 @@
+"use client";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-
+import TextTransition, { presets } from "react-text-transition";
+import "./animateText.css";
 export default function Home() {
+  const TEXTS = ["Forest", "Building", "Tree", "Color"];
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
   return (
     <>
       <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10 px-4 overflow-x-hidden">
         <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
           <div className="flex flex-col justify-center gap-8">
-            <h1 className="h1-bold">
-              Hola, welcome to Fire-Work by Pranay Parikh.
+            <h1 className="h1-bold ">
+              Hola, welcome to Fire-Work by{" "}
+              <span className="colorChange">Pranay Parikh </span>.{" "}
+              {/* <TextTransition springConfig={presets.molasses}>
+                {TEXTS[index % TEXTS.length]}
+              </TextTransition> */}
             </h1>
             <p className="p-regular-20 md:p-regular-24">
               Here you can drop collab ideas for Pranay or explore all the{" "}
