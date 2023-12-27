@@ -137,6 +137,7 @@ export type UrlQueryParams = {
   key: string;
   value: string | null;
 };
+
 export type RemoveUrlQueryParams = {
   params: string;
   keysToRemove: string[];
