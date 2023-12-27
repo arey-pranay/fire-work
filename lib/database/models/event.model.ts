@@ -26,3 +26,4 @@ const EventSchema = new Schema({
   linkedPeople: { type: Schema.Types.ObjectId, ref: "User" }, //to tag co-creators or github organizations
 });
 const Event = models.Event || model("Event", EventSchema);
+export default Event;
