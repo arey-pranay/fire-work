@@ -3,7 +3,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import TextTransition, { presets } from "react-text-transition";
 import "./animateText.css";
 export default function Home() {
   const TEXTS = ["Forest", "Building", "Tree", "Color"];
